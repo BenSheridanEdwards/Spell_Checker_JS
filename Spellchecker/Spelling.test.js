@@ -16,8 +16,12 @@ describe('spelling', () => {
       expect(spelling('hello there')).toEqual('hello there');
     });
 
-    it("receives a string with two words 'helloo there', the first spelt incorrectly, and highlights only the first word", () => {
+    it("receives a string with two words 'helloo there', where the first word is spelt incorrectly, and highlights only the first word", () => {
       expect(spelling('helloo there')).toEqual('~helloo~ there');
+    });
+
+    it("receives a string with two words 'helloo theree', where both words are spelt incorrectly, and highlights both words", () => {
+      expect(spelling('helloo theree')).toEqual('~helloo~ ~theree~');
     });
   });
 });
