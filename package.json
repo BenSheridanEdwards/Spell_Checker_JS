@@ -1,0 +1,15 @@
+{
+  "name": "spell_checker_js",
+  "version": "1.0.0",
+  "description": "JavaScript TDD Challenge - Build a spelling checker",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "watch": "jest --watch",
+  },
+  "author": "Ben Sheridan-Edwards",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^26.0.1"
+  }
+}
