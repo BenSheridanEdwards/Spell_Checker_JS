@@ -41,5 +41,9 @@ describe('spelling', () => {
     it("receives a string with 'hello!' spelt correctly, and returns it", () => {
       expect(spelling('hello!', dictionary)).toEqual('hello!');
     });
+
+    it("receives a string with 'helloo!' spelt incorrectly, and highlights just the mispelt word", () => {
+      expect(spelling('helloo!', dictionary)).toEqual('~helloo~!');
+    });
   });
 });
