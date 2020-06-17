@@ -1,7 +1,8 @@
 const spelling = require('./Spelling');
 
 describe('spelling', () => {
-  const dictionary = ['hello', 'there', 'friend'];
+  const dictionary = [' ', '!', 'hello', 'there', 'friend'];
+
   describe('when the spellchecker is passed one word', () => {
     it("receives a string with one word 'hello', spelt correctly, and returns it", () => {
       expect(spelling('hello', dictionary)).toEqual('hello');
@@ -33,6 +34,12 @@ describe('spelling', () => {
       expect(spelling('hello there friend', dictionary)).toEqual(
         'hello there friend'
       );
+    });
+  });
+
+  describe('when the spellchecker receives a string with punctuation', () => {
+    it("receives a string with 'hello!' spelt correctly, and returns it", () => {
+      expect(spelling('hello!', dictionary)).toEqual('hello!');
     });
   });
 });
